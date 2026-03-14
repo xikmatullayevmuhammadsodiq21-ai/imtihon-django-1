@@ -19,7 +19,3 @@ def create_page(request):
 
     return render(request, 'create_book.html')
 
-
-def delete_book(request, index):
-    books.pop(index)
-    return redirect('book_list')

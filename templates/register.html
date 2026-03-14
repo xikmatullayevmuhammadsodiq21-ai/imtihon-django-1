@@ -72,7 +72,7 @@
                     class="layout-content-container flex flex-col w-full max-w-[480px] bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
                     <div class="flex flex-col gap-2 mb-8">
                         <h1 class="text-slate-900 dark:text-white text-3xl font-black leading-tight tracking-tight">
-                            Create Account</h1>
+                         Create Account</h1>
                         <p class="text-slate-500 dark:text-slate-400 text-base font-normal">Join our book management
                             community today.</p>
                     </div>
@@ -84,7 +84,7 @@
                                     class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">person</span>
                                 <input
                                     class="flex w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary h-12 pl-10 pr-4 placeholder:text-slate-400 text-sm font-normal"
-                                    placeholder="John Doe" type="text" />
+                                    placeholder="Username" type="text" name="Username"/>
                             </div>
                         </label>
                         <label class="flex flex-col gap-2">
@@ -94,7 +94,7 @@
                                     class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
                                 <input
                                     class="flex w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary h-12 pl-10 pr-4 placeholder:text-slate-400 text-sm font-normal"
-                                    placeholder="email@example.com" type="email" />
+                                    placeholder="email" type="email" name="email"/>
                             </div>
                         </label>
                         <label class="flex flex-col gap-2">
@@ -104,7 +104,7 @@
                                     class="material-symbols-outlined absolute left-3 text-slate-400 text-xl">lock</span>
                                 <input
                                     class="flex w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary h-12 pl-10 pr-12 placeholder:text-slate-400 text-sm font-normal"
-                                    placeholder="Min. 8 characters" type="password" />
+                                    placeholder="password" type="password" name="password"/>
                                 <button
                                     class="absolute right-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
                                     type="button">
@@ -120,7 +120,7 @@
                                     class="material-symbols-outlined absolute left-3 text-slate-400 text-xl">lock_reset</span>
                                 <input
                                     class="flex w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary h-12 pl-10 pr-12 placeholder:text-slate-400 text-sm font-normal"
-                                    placeholder="Repeat your password" type="password" />
+                                    placeholder="Repeat password" type="password" name="password"/>
                             </div>
                         </label>
                         <div class="flex items-center gap-2 py-2">
@@ -135,7 +135,8 @@
                         <button
                             class="w-full flex items-center justify-center rounded-lg h-12 bg-primary text-white text-base font-bold shadow-md hover:bg-primary/90 transition-all mt-2"
                             type="submit">
-                            Create Account
+                            <a href="{% url 'login' %}">Create Account</a>
+                            
                         </button>
                     </form>
                     <div class="mt-8 text-center">
