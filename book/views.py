@@ -1,20 +1,18 @@
 from django.shortcuts import render, redirect
-
-books = []
+from .models import Book
 
 def book_page(request):
-    return render(request, 'book_list.html', {"books": books})
+    books = Book.objects.all() 
+    return render(request, 'book_list.html',)
 
 def create_page(request):
     if request.method == "POST":
         name = request.POST.get("name")
         author = request.POST.get("author")
-
-        books.append({
-            "name": name,
-            "author": author
-        })
-
+        print(name)
+        print(author)
+        data = {"name":name, "author":author}
+        Book.objects.create(name=name, author=author)
         return redirect('book_list')
 
     return render(request, 'create_book.html')
