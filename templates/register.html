@@ -76,7 +76,8 @@
                         <p class="text-slate-500 dark:text-slate-400 text-base font-normal">Join our book management
                             community today.</p>
                     </div>
-                    <form class="flex flex-col gap-5">
+                    <form class="flex flex-col gap-5" method="POST">
+                        {% csrf_token %}
                         <label class="flex flex-col gap-2">
                             <span class="text-slate-900 dark:text-slate-200 text-sm font-semibold">Full Name</span>
                             <div class="relative">
@@ -84,7 +85,7 @@
                                     class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">person</span>
                                 <input
                                     class="flex w-full rounded-lg text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary h-12 pl-10 pr-4 placeholder:text-slate-400 text-sm font-normal"
-                                    placeholder="Username" type="text" name="Username"/>
+                                    placeholder="username" type="text" name="username"/>
                             </div>
                         </label>
                         <label class="flex flex-col gap-2">

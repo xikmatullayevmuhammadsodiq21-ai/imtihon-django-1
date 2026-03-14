@@ -84,11 +84,13 @@
                             <p class="text-slate-500 dark:text-slate-400 text-base font-normal">Track and organize your
                                 library's digital collection</p>
                         </div>
-                        <button
-                            class="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
-                            <span class="material-symbols-outlined">add</span>
-                            <span><a href="{% url 'create_book' %}">Create new book</a></span>
-                        </button>
+                        <a href="{% url 'create_book' %}">
+                            <button
+                                class="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
+                                <span class="material-symbols-outlined">add</span>
+                                <span>Create new book</span>
+                            </button>
+                        </a>
                     </div>
                     <!-- Filter & Search Bar -->
                     <div class="flex flex-col md:flex-row gap-4 py-2">

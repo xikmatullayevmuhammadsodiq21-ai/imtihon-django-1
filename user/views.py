@@ -10,6 +10,7 @@ def register_page(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
 
+        print(username)
         User.objects.create_user(
             username=username,
             email=email,
@@ -24,12 +25,12 @@ def register_page(request):
 def login_page(request):
 
     if request.method == "POST":
-
+        print("ishladi")
         username = request.POST.get("username")
         password = request.POST.get("password")
-
+        print(username , password)
         user = authenticate(request, username=username, password=password)
-
+        print(user)
         if user is not None:
             login(request, user)
             return redirect('book_list')
