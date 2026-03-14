@@ -117,13 +117,14 @@
                             <div class="overflow-x-auto">
                                 <table class="w-full text-left border-collapse">
                                     <thead>
+                                        {% for book in books %}
                                         <tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-primary/10">
                                             <th
                                                 class="px-6 py-4 text-slate-900 dark:text-slate-100 text-sm font-bold uppercase tracking-wider">
-                                                Name</th>
+                                                {{book.name}}</th>
                                             <th
                                                 class="px-6 py-4 text-slate-900 dark:text-slate-100 text-sm font-bold uppercase tracking-wider">
-                                                Author Name</th>
+                                                {{author.name}}</th>
                                             <th
                                                 class="px-6 py-4 text-slate-900 dark:text-slate-100 text-sm font-bold uppercase tracking-wider">
                                                 Status</th>
@@ -131,6 +132,7 @@
                                                 class="px-6 py-4 text-slate-900 dark:text-slate-100 text-sm font-bold uppercase tracking-wider text-right">
                                                 Actions</th>
                                         </tr>
+                                        {% endfor %}
                                     </thead>
                                     <tbody class="divide-y divide-primary/5">
                                         <!-- Row 1 -->

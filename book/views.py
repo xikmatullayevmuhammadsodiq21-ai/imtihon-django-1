@@ -1,8 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
+books = []
+
 def book_page(request):
-    return render(request, 'book_list.html')
+    return render(request, 'book_list.html', {"books": books})
 
 def create_page(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        author = request.POST.get("author")
+
+        books.append({
+            "name": name,
+            "author": author
+        })
+
+        return redirect('book_list')
+
     return render(request, 'create_book.html')
+
+
+def delete_book(request, index):
+    books.pop(index)
+    return redirect('book_list')
